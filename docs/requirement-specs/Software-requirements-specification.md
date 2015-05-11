@@ -1,4 +1,4 @@
-# Software-requirements-specification
+# Software requirements specification
 
 Contents
 - [Introduction](https://github.com/FlyingBaguette/aero-boulangerie/blob/master/docs/requirement-specs/Software-requirements-specification.md#introduction)
