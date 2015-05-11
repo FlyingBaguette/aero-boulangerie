@@ -1,7 +1,7 @@
 # Software-requirements-specification
 
 Contents
-- [Portability](/#Portability)
+- [Portability](https://github.com/FlyingBaguette/aero-boulangerie/blob/master/docs/requirement-specs/Software-requirements-specification.md#portability)
 
 ##Introduction
 test text test test test text
