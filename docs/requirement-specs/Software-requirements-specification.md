@@ -53,22 +53,27 @@ Local communcation to use a wifi/bluetooth module, I2C.
 
 
 ###Software interfaces
-test text test test test text
+To be defined once CPU has been choosen...
 
 ###Communication Interfaces
-
+I2C predonmantly. Though SPI, UART and others are possabilities if I2C bus becomes heavily used.
 
 ###Memory Constraints
-test text test test test text
+512kb of flash memory for the program.
+SD card support.
 
 ###Product Functions
-test text test test test text
+* Fly in the usual quad copter drone method.
+* Fly in forward flight.
+* Wireless communcate with a controller/base station.
+* Carry out commands from the controller/base station.
+* Log flight data.
 
 ###User Characteristics
-test text test test test text
+The user will be able to either locally/manually control the drone with software assistance or have the ability to upload mission plans etc.
 
 ###Constraints, assumptions and dependencies
-test text test test test text
+To write...
 
 ###Specific requirements
 ####Functional requirements
