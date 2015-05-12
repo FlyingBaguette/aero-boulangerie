@@ -56,7 +56,7 @@ Local communcation to use a wifi/bluetooth module, I2C.
 To be defined once CPU has been choosen...
 
 ###Communication Interfaces
-I2C predonmantly. Though SPI, UART and others are possabilities if I2C bus becomes heavily used.
+I2C predomaninantly. Though SPI, UART and others are possabilities if I2C bus becomes heavily used.
 
 ###Memory Constraints
 512kb of flash memory for the program.
