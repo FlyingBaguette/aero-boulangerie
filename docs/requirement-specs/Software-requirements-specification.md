@@ -77,11 +77,11 @@ To write...
 
 ###Specific requirements
 ####Functional requirements
-* Requirement 1
+* Apply instructions from controller to actuators 
 * Requirement 2
 
 ####Performance requirements
-* Requirement 1
+* Radio must have the bandwidth to transfer telemetry data of all sensors atleast once per second 
 * Requirement 2
 
 ####Design Constraints
