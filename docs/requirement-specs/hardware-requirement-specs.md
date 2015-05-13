@@ -10,14 +10,14 @@ This document identifies a list of requirements to ensure the correct hardware i
 It is expected that the processor can:
  - Perform 32 bit calculations
  - Run a RTOS
- - Store a RTOS in memory (FreeRTOS takes 10KB)
+ - Store a RTOS in memory (FreeRTOS takes 10KB, uC/OS-III takes 24KB)
  - Inteface with multiple sensors (Minimum 4) over a industry recognised bus
  - Have a clock speed high enough to handle wireless communication whilst recording sensor data
  - Inteface with SD card
  - 
  
 It is expected that each sensor should be able to:
- - Reading resolution that is not bigger than the processor architecture
+ - Have a reading resolution that is not bigger than the processor architecture
  - Report readings atleast twice per second
  - Communicate on a bus supported by the chosen processor (Likely I2C or SPI)
  
