@@ -2,10 +2,20 @@
 
 Contents
 - [Introduction](https://github.com/FlyingBaguette/aero-boulangerie/blob/master/docs/requirement-specs/hardware-requirement-specs.md#introduction)
+- [Build requirements](https://github.com/FlyingBaguette/aero-boulangerie/blob/master/docs/requirement-specs/hardware-requirement-specs.md#build-requirements)
 - [Performance requirements](https://github.com/FlyingBaguette/aero-boulangerie/blob/master/docs/requirement-specs/hardware-requirement-specs.md#performance-requirements)
 
 ## Introduction
 This document identifies a list of requirements to ensure the correct hardware is selected for its purpose.
+
+## Build requirements
+ - The entire drone to weigh under 3kg preferablly 2/2.5kb
+ - Be resilliant to rain and weather conditions
+ - Have "wings" that produce lift
+ - Have an aerodynamic body to reduce drag
+ - Be able to carry at least 2x 11.1V 3000mah batteries
+ - Payload "area" to house more batteries or other equipment
+ - A motherboard which houses and connects all other eletronics/sensors
 
 ## Performance requirements
 It is expected that the processor can:
