@@ -1,4 +1,4 @@
-# AB | the aero-boulangerie
+# AB | la aero-boulangerie
 
 A remotely controlled, four rotor VTOL aircraft running on batteries. 
 
