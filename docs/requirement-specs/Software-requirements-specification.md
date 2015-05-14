@@ -77,8 +77,10 @@ To write...
 
 ###Specific requirements
 ####Functional requirements
+* Create radio link connection
+ * How will this get configured/be stored?
 * Apply instructions from controller to actuators 
-* Requirement 2
+* Use readings from sensors to improve stabilisation
 
 ####Performance requirements
 * Radio must have the bandwidth to transfer telemetry data of all sensors atleast once per second 
