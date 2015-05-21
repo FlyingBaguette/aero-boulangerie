@@ -108,7 +108,7 @@ The software must remain responsive to new commands and be able to service a kil
 test text test test test text
 
 ####Security
-test text test test test text
+The main attack vector for AB will be the wireless communications. Encryption and a form of authenication would provide some degree of security to prevent a malicous user snooping sensor data and/or taking control of the aircraft. The downside to implementing these features would be the impact on responsiveness.
 
 ####Maintainability
 test text test test test text
