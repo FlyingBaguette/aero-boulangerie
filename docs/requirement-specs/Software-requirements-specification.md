@@ -102,7 +102,7 @@ To write...
 
 ###Software System attributes
 ####Reliability
-test text test test test text
+The software must remain responsive to new commands and be able to service a kill command at all times. Deadlock risk and WCET will be calculated to ensure the software is architected in a reliable manor.
 
 ####Availability
 test text test test test text
