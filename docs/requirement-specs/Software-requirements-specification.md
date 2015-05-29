@@ -40,6 +40,7 @@ The main communication method will be I2C.
 SD card support for a "black/bread box" will be used for flight logging. This also allows for mission planner saved data as well as remote/images and possible video support.
 
 Motor control hardware will be detailed at a later stage, as will the method for rotating the propellor motors.
+
 GPS module (with magnometer potentially) for remote flight, I2C bus.
 
 Standard GPIO for things such as relay control, LED outputs, PWM outs, high powered light etc.
@@ -87,14 +88,13 @@ To write...
 
 ###Specific requirements
 ####Functional requirements
-* Create radio link connection
- * How will this get configured/be stored?
-* Apply instructions from controller to actuators 
+* Create radio link connection: User/passwords could be stored on SD card with a "admin" user/pass stored within the program. A simple pairing mathod can be used to ensure both devices get data from other sources but we could look into adding encryption as a future feature.
+* Apply instructions from controller to actuators.
 * Use readings from sensors to improve stabilisation
 
 ####Performance requirements
 * Radio must have the bandwidth to transfer telemetry data of all sensors atleast once per second 
-* Requirement 2
+* Program must run fast enough and with a quick enough reponse time to keep the drone controlled in flight.
 
 ####Design Constraints
 * Requirement 1
@@ -102,16 +102,17 @@ To write...
 
 ###Software System attributes
 ####Reliability
-The software must remain responsive to new commands and be able to service a kill command at all times. Deadlock risk and WCET will be calculated to ensure the software is architected in a reliable manor.
+The software must remain responsive to new commands and be able to service a kill command at all times. Deadlock risk and WCET will be calculated to ensure the software is architected in a reliable manor. Task watchdogs are a must. Backup/redudant CPU could also help with this.
 
 ####Availability
-test text test test test text
+* After boot-up cycle the software needs to be consistantly avlaible to allow new commands encription/message pairing pending.
 
 ####Security
-The main attack vector for AB will be the wireless communications. Encryption and a form of authenication would provide some degree of security to prevent a malicous user snooping sensor data and/or taking control of the aircraft. The downside to implementing these features would be the impact on responsiveness.
+* The main attack vector for AB will be the wireless communications. Encryption and a form of authenication would provide some degree of security to prevent a malicous user snooping sensor data and/or taking control of the aircraft. The downside to implementing these features would be the impact on responsiveness.
 
 ####Maintainability
-test text test test test text
+* Code should be construction in such a way to allow easy debug finding and feature addition.
+* Code should only ever be uploaded when the batteries are dissconnected. Doing so while power on the motors can lead to undesired behaviour for example on GF's drone upon new code downloaded to thr ardunio while powered the motors will go to 100% throttle uncontrolled for around 10 seconds.
 
 ####Portability
-test text test test test text
+* Could should be easily uploadble to AB when powered off and in a safe manner.
