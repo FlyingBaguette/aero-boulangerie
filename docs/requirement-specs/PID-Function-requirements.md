@@ -14,15 +14,15 @@ Be integrated as an object/add on instruction to allow the code to be used many 
 
 ## I/O listing for the object/add on instruction.
 ### Inputs
-* iEn: BOOL Enable PID control
-* iFeedbackValue: REAL Current reading 
-* iTarget: REAL Desired target
+* iEn: BOOL Enable PID control, could be useful, will keep the historical data parts running so they are up to date but inhibit running of other parts of the function (increasing speed and efficency).
+* iFeedbackValue: REAL Current reading from a sensor/calculation
+* iTarget: REAL Desired target for the sensor calculation.
 
 ### Settings
 * sP: REAL P value
 * sI: REAL I value
 * sD: REAL D value
-* sInvertOutputs: BOOL Outputs need to react opposite to the feedback check this flag
+* sInvertOutputs: BOOL Reverses the output value (could be useful in some scenarios).
 
 ### Outputs
 * oOutputValue: REAL Output to create the change required to get the feedback to match the target.
