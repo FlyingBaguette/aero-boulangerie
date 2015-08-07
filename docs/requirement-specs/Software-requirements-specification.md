@@ -33,7 +33,7 @@ The drone would use 1 main CPU supporting 32 bit precision at reasonable speed. 
 
 The whole system, apart from the rotors, will run at 3.3V to ensure low power consumption.
 
-Gyroscopes/Accelerometers should use a 3 voting system with them being flight critical sensors to ensure accurate sensor readings as well as able to tolerate a single sensor failure. Must support I2C bus.
+Gyroscopes/Accelerometers should use a 3 voting system with them being flight critical sensors to ensure accurate sensor readings as well as able to tolerate a single sensor failure. Initial version may just use 1 sensor for lower costs. Must support I2C bus.
 
 The main communication method will be I2C.
 
@@ -41,7 +41,7 @@ SD card support for a "black/bread box" will be used for flight logging. This al
 
 Motor control hardware will be detailed at a later stage, as will the method for rotating the propeller motors.
 
-GPS module (with magnometer potentially) for remote flight, I2C bus.
+GPS module with magnometer potentially for remote flight, I2C bus.
 
 Standard GPIO for things such as relay control, LED outputs, PWM outs, high powered light etc.
 
@@ -54,7 +54,7 @@ Local communication to use a wifi/bluetooth module, I2C.
 
 
 ###Software interfaces
-To be defined once CPU has been choosen...
+CPU choosen to be a STMMicro 32bit CPU. Linux OS enviroment using Eclipse to program AB. More info to follow...
 
 ###Communication Interfaces
 - I2C to cover sensor communications
@@ -71,7 +71,7 @@ The wireless communications will conform to a defined protocol that needs to han
 
 ###Memory Constraints
 512kb of flash memory for the program.
-SD card support.
+SD card support for data logging, data storage e.g. height maps etc.
 
 ###Product Functions
 * Fly in the usual quad copter drone method.
@@ -97,8 +97,10 @@ To write...
 * Program must run fast enough and with a quick enough response time to keep the drone controlled in flight.
 
 ####Design Constraints
-* Requirement 1
-* Requirement 2
+Varibles must use the following data types or if a structure contain a subset of the following data types only...
+* BOOL, array in mutiples of 32 only e.g. BOOL testBool[32];
+* DINT, not used for actual numbers but can be bit addressed for fast computation and efficent memory usage of 32 bools.
+* REAL, used for all numbers analouge values (not boolean), no long reals to be used at present.
 
 ###Software System attributes
 ####Reliability
@@ -108,7 +110,7 @@ The software must remain responsive to new commands and be able to service a kil
 * After boot-up cycle the software needs to be consistently available to allow new commands encryption/message pairing pending.
 
 ####Security
-* The main attack vector for AB will be the wireless communications. Encryption and a form of authentication would provide some degree of security to prevent a malicious user snooping sensor data and/or taking control of the aircraft. The downside to implementing these features would be the impact on responsiveness.
+* The main attack vector for AB will be the wireless communications. Encryption and a form of authentication would provide some degree of security to prevent a malicious user snooping sensor data and/or taking control of the aircraft. The downside to implementing these features would be the impact on responsiveness. Another solution would be to only allow new commands to be sent once landed and no mission plan uploaded to AB.
 
 ####Maintainability
 * Code should be construction in such a way to allow easy debug finding and feature addition.
