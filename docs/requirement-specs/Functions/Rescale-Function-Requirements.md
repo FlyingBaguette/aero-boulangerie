@@ -18,4 +18,4 @@ This function is used for converting units set in one scale into another, for ex
 * sOutputUpperDB: REAL the upper deadband (minium) value of the output scale.
 
 ### Outputs
-oOutputScale: REAL the rescaled value result.
+* oOutputScale: REAL the rescaled value result.
