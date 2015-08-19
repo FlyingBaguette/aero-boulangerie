@@ -59,6 +59,7 @@ CPU choosen to be a STMMicro 32bit CPU. Linux OS enviroment using Eclipse to pro
 ###Communication Interfaces
 - I2C to cover sensor communications
 - SPI required for SD card interfacing
+- Enable printing to the UART to allow for bluetooth module to be used for debugging
 
 UART and others are possibilities if I2C bus becomes heavily used.
 
