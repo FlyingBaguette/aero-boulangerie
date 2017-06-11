@@ -17,13 +17,14 @@ This document identifies a list of requirements to ensure the correct hardware i
  - Payload "area" to house more batteries or other equipment
  - A motherboard that houses and connects all other electronics/sensors
  - 4 Motors to create lift in hover mode and allow forward momentum when in flight mode.
+ - Elivators if required to allow control in normal (none hover) flight.
 
 ## Performance requirements
 It is expected that the processor can:
  - Perform 32 bit calculations
  - Run a RTOS
  - Store a RTOS in memory (FreeRTOS takes 10KB, uC/OS-III takes 24KB)
- - Interface with multiple sensors (Minimum 4) over a industry recognised bus
+ - Interface with multiple sensors (Minimum 4) over a industry recognised bus e.g. I2C
  - Have a clock speed high enough to handle wireless communication whilst recording sensor data.
  - Interface with SD card
  - Low power consumption from devices
