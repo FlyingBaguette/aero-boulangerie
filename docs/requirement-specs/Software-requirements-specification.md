@@ -39,11 +39,11 @@ The main communication method will be I2C.
 
 SD card support for a "black/bread box" will be used for flight logging. This also allows for mission planner saved data as well as remote/images and possible video support.
 
-Motor control hardware will be detailed at a later stage, as will the method for rotating the propeller motors.
+Motor control hardware will use 4xESC for control of each motor, ESC's are controlled via PWM in most cases and as such the CPU needs to support this. The method for rotating the propeller motors is TBC.
 
 GPS module with magnometer potentially for remote flight, I2C bus.
 
-Standard GPIO for things such as relay control, LED outputs, PWM outs, high powered light etc.
+Standard GPIO for things such as relay control, LED outputs, PWM outs, high powered lights etc.
 
 Ultrasonic sensors for close range object detection. Preferable I2C bus but could use the analogue ADC in a pinch.
 Altitude sensor to measure height, I2C bus.
@@ -54,21 +54,20 @@ Local communication to use a wifi/bluetooth module, I2C.
 
 
 ###Software interfaces
-CPU choosen to be a STMMicro 32bit CPU. Linux OS enviroment using Eclipse to program AB. More info to follow...
+CPU choosen to be a STMMicro 32bit CPU. Linux OS enviroment using Eclipse to program AB if possible otherwise windows will be used.
 
 ###Communication Interfaces
 - I2C to cover sensor communications
 - SPI required for SD card interfacing
 - Enable printing to the UART to allow for bluetooth module to be used for debugging
 
-UART and others are possibilities if I2C bus becomes heavily used.
+UART and others are possibilities if I2C bus becomes heavily used, as such the I2C bus should be set to a high a speed as possible.
 
 The wireless communications will conform to a defined protocol that needs to handle
 - Handshake to establish connection
 - Control commands
 - Sensor identifier with reading
 - Close connection
-
 
 ###Memory Constraints
 512kb of flash memory for the program.
